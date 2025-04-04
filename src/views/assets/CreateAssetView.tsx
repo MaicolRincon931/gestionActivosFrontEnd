@@ -41,7 +41,7 @@ export default function CreateAssetView() {
     });
 
     const handleForm = (formData: AssetFormData) => {
-        if (!formData.icon) {  // ❌ Bloquea el envío si no hay icono seleccionado
+        if (!formData.icon) {  // 
             toast.error("Debes seleccionar un icono antes de continuar.");
             return;
         }
@@ -77,7 +77,7 @@ export default function CreateAssetView() {
                         watch={watch}
                     />
 
-                    {/* ✅ Validación de icono en la interfaz */}
+                  
                     {errors.icon && (
                         <p className="text-red-500 text-sm">{errors.icon.message}</p>
                     )}

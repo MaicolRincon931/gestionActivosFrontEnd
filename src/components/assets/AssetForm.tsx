@@ -30,74 +30,74 @@ export default function AssetForm({ errors, register, setValue, watch }: AssetFo
 
     return (
         <>
-            {/* Asset Name */}
+            {/* Asset Namwe */}
             <div className="mb-5 space-y-3">
-                <label htmlFor="name" className="text-sm uppercase font-bold">Asset Name</label>
+                <label htmlFor="name" className="text-sm uppercase font-bold">Nombre Activo</label>
                 <input
                     id="name"
                     className="w-full p-3 border border-gray-200"
                     type="text"
-                    placeholder="Asset Name"
-                    {...register("name", { required: "Asset name is required" })}
+                    placeholder="Nombre del Activo"
+                    {...register("name", { required: "Es obligatorio el nombre del activo" })}
                 />
                 {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
             </div>
 
             {/* Comments */}
             <div className="mb-5 space-y-3">
-                <label htmlFor="comments" className="text-sm uppercase font-bold">Comments</label>
+                <label htmlFor="comments" className="text-sm uppercase font-bold">Comentarios</label>
                 <textarea
                     id="comments"
                     className="w-full p-3 border border-gray-200"
-                    placeholder="Asset Comments"
-                    {...register("comments", { required: "Comments are required" })}
+                    placeholder="Comentarios"
+                    {...register("comments", { required: "Los comentarios son obligatorios" })}
                 />
                 {errors.comments && <ErrorMessage>{errors.comments.message}</ErrorMessage>}
             </div>
 
             {/* Latitude */}
             <div className="mb-5 space-y-3">
-                <label htmlFor="latitude" className="text-sm uppercase font-bold">Latitude</label>
+                <label htmlFor="latitude" className="text-sm uppercase font-bold">Latitud</label>
                 <input
                     id="latitude"
                     className="w-full p-3 border border-gray-200"
                     type="number"
                     step="any"
-                    placeholder="Latitude"
-                    {...register("latitude", { required: "Latitude is required" })}
+                    placeholder="Latitud"
+                    {...register("latitude", { required: "Latitud es obligatoria" })}
                 />
                 {errors.latitude && <ErrorMessage>{errors.latitude.message}</ErrorMessage>}
             </div>
 
             {/* Longitude */}
             <div className="mb-5 space-y-3">
-                <label htmlFor="longitude" className="text-sm uppercase font-bold">Longitude</label>
+                <label htmlFor="longitude" className="text-sm uppercase font-bold">Longitud</label>
                 <input
                     id="longitude"
                     className="w-full p-3 border border-gray-200"
                     type="number"
                     step="any"
-                    placeholder="Longitude"
-                    {...register("longitude", { required: "Longitude is required" })}
+                    placeholder="Longitud"
+                    {...register("longitude", { required: "Longitud es obligatoria" })}
                 />
                 {errors.longitude && <ErrorMessage>{errors.longitude.message}</ErrorMessage>}
             </div>
 
             {/* Created Date */}
             <div className="mb-5 space-y-3">
-                <label htmlFor="created_at" className="text-sm uppercase font-bold">Created</label>
+                <label htmlFor="created_at" className="text-sm uppercase font-bold">Creado:</label>
                 <input
                     id="created_at"
                     className="w-full p-3 border border-gray-200"
                     type="date"
-                    {...register("created_at", { required: "Date is required" })}
+                    {...register("created_at", { required: "La fecha de creación es obligatoria" })}
                 />
                 {errors.created_at && <ErrorMessage>{errors.created_at.message}</ErrorMessage>}
             </div>
 
             {/* Icon Selection */}
             <div className="mb-5 space-y-3">
-                <label className="text-sm uppercase font-bold">Icon</label>
+                <label className="text-sm uppercase font-bold">Icono</label>
                 <div className="grid grid-cols-3 gap-4">
                     {icons.map((icon) => (
                         <div
